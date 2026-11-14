@@ -1,0 +1,25 @@
+{
+  "seed_path": "data/seeds.jsonl",
+  "candidate_path": "outputs/candidates.jsonl",
+  "verdict_path": "outputs/verdicts.jsonl",
+  "summary_path": "outputs/benchmark_summary.json",
+  "csv_dir": "outputs/tables",
+  "log_file": "outputs/benchmark.log",
+  "progress_every": 50,
+  "verifiers": [
+    "rule_exact_match",
+    "rule_normalized_numeric",
+    "hybrid_rule_exact_then_numeric"
+  ],
+  "stress_types": [
+    "correct_plain",
+    "fullwidth_digits",
+    "answer_with_explanation",
+    "mixed_script_answer",
+    "percent_equivalent",
+    "decimal_equivalent",
+    "fraction_equivalent",
+    "kanji_digits",
+    "near_miss_numeric"
+  ]
+}

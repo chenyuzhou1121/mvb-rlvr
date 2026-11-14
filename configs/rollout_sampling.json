@@ -1,0 +1,14 @@
+{
+  "seed_path": "data/seeds.jsonl",
+  "output_path": "outputs/rollouts.jsonl",
+  "log_file": "outputs/sampling.log",
+  "base_url": "https://api.example.com/v1",
+  "api_key_env": "MODEL_API_KEY",
+  "model": "model-name",
+  "samples_per_problem": 4,
+  "temperature": 0.7,
+  "max_tokens": 4096,
+  "reasoning_mode": "direct",
+  "timeout_seconds": 120,
+  "max_retries": 3
+}

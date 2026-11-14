@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mvb-rlvr"
+version = "0.1.0"
+description = "Multilingual verifier benchmarking, rollout diagnosis, and answer selection"
+requires-python = ">=3.10"
+# The default commands use only the Python standard library.
+dependencies = []
+
+[project.optional-dependencies]
+# Install this extra to enable math_verify and minerva_is_equiv.
+public-verifiers = [
+    "math-verify[antlr4-11-0]==0.9.0",
+    "sympy==1.14.0",
+]
+
+[project.scripts]
+# Expose the same interface as python -m mvb_rlvr.
+mvb-rlvr = "mvb_rlvr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
